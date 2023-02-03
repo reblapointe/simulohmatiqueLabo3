@@ -3,12 +3,12 @@ package ca.cegepjonquiere.jha.simulohmatique.circuit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class FabriqueResistance {
+public class FabriqueResistor {
 
-    public static final String PATRON_RESISTANCE = "[BROJVbMGL][NBROJVbMGL]{1,2}[NBROJVbMoA][NBROJVbMoA]";
+    public static final String PATRON_RESISTANCE = "[NBROJVbMGL]{2,3}[NBROJVbMGLAo][BRVbMGAo]";
     public static Pattern patronCode = Pattern.compile(PATRON_RESISTANCE);
 
-    public static Resistor fabriquerResistance(String code)
+    public static Resistor fabriquerResistor(String code)
     {
         Matcher matcher = patronCode.matcher(code);
 

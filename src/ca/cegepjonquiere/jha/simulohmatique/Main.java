@@ -27,7 +27,7 @@ public class Main {
         String[] resistors = entree.split(",");
         for(String resistor : resistors)
         {
-            Resistor r  = FabriqueResistance.fabriquerResistance(resistor);
+            Resistor r  = FabriqueResistor.fabriquerResistor(resistor);
             if (r != null)
                 c.ajouterResistor(r);
         }
